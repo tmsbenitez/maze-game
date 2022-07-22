@@ -4,6 +4,8 @@ Simple Maze Game with three levels of difficulty using the library [Matter.js](h
 
 ![Maze Game Image](./github/maze-game.png)
 
+[Live Demo](https://tmsbenitez.github.io/maze-game/).
+
 ## Authors and acknowledgment.
 
 Soundtrack: [Grey by Romain Axisa](https://www.youtube.com/watch?v=QgcsNCC_OCQ).
