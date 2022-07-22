@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- MATTER.JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+
+		<!-- FONT AWESOME -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Code:wght@300;400;500;600;700&family=Philosopher:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Maze Game</title>
+	</head>
+
+	<body>
+		<audio src="./audio/soundtrack.mp3" id="soundtrack" loop></audio>
+		<section class="landing-screen" id="landing">
+			<div class="container">
+				<div class="name" id="name">
+					<h1 class="game-name">MAZE GAME</h1>
+				</div>
+				<div class="menu-container" id="menu">
+					<div class="menu">
+						<button class="menu-items" id="start">Start Game</button>
+						<a class="menu-items anchor" href="">TMS.</a>
+					</div>
+					<div class="option-menu hidden">
+						<button>Music</button>
+					</div>
+				</div>
+				<div class="difficulty hidden" id="difficulty">
+					<button class="return-btn" onclick="window.location.reload()">
+						<i class="fa-solid fa-arrow-left-long"></i>
+					</button>
+					<div class="name">
+						<h1 class="game-name">SELECT DIFFICULTY</h1>
+					</div>
+					<div class="menu">
+						<button class="menu-items" id="easy">Easy</button>
+						<button class="menu-items" id="medium">Medium</button>
+						<button class="menu-items" id="hard">Hard</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="overlay hidden" id="overlay">
+			<div class="controls item">
+				<h3 class="overlay-label">Controls</h3>
+				<div class="overlay-item">
+					<img src="./img/controls.jpg" class="controls-img" />
+				</div>
+			</div>
+
+			<div class="overlay-options item">
+				<h3 class="overlay-label">Options</h3>
+				<div class="overlay-item">
+					<div class="cheat">
+						<input
+							type="checkbox"
+							name="steel"
+							id="steel"
+							class="cheat-input"
+						/>
+						<label for="cheat-label">Steel Ball</label>
+					</div>
+					<button class="option" id="music">
+						<i class="fa-solid fa-music"></i>
+					</button>
+				</div>
+			</div>
+
+			<div class="overlay-timer item">
+				<h3 class="overlay-label">Time</h3>
+				<div class="overlay-item">
+					<span class="seconds">
+						Seconds:
+						<p id="current-time"></p>
+					</span>
+				</div>
+			</div>
+		</section>
+
+		<div class="winner hidden">
+			<h2 class="win-message">You Win!</h2>
+			<button class="again" onclick="window.location.reload()">
+				Play Again
+			</button>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,242 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	color: var(--font);
+	background-color: var(--bg);
+	overflow-y: hidden;
+}
+
+::selection {
+	background-color: crimson;
+}
+
+:root {
+	/* COLORS */
+	--bg: #14151f;
+	--font: #fefefe;
+
+	/* FONTS */
+	--system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--fira: 'Fira Code', monospace;
+	--philo: 'Philosopher', sans-serif;
+}
+
+/* LANDING SECTION */
+
+.landing-screen {
+	background: url('./img/bg-maze.png');
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 5rem;
+}
+
+.container {
+	height: 100%;
+}
+
+/* GAME TITLE */
+
+.name {
+	margin-bottom: 10rem;
+	display: flex;
+	align-items: center;
+}
+
+.game-name {
+	font-family: var(--philo);
+	font-size: 10rem;
+	text-align: center;
+}
+
+/* MENU SECTION */
+
+.menu-container {
+	font-family: var(--system);
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}
+
+.menu-items {
+	font-size: 3.5rem;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border: none;
+	color: var(--font);
+	font-weight: bold;
+	transition: 0.1s;
+}
+
+.menu-items:hover {
+	color: crimson;
+}
+
+.anchor {
+  text-decoration: none;
+}
+
+/* OVERLAY */
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 30rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	bottom: 0;
+	z-index: 1;
+}
+
+.overlay-label {
+	font-family: var(--system);
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.overlay-item {
+	height: 12rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* CONTROLS */
+
+.item {
+	border: 2px solid crimson;
+	border-radius: 1rem;
+	padding: 2rem;
+	width: 50rem;
+	height: 25rem;
+}
+
+.controls-img {
+	background-color: var(--bg);
+}
+
+.return-btn {
+	position: absolute;
+	color: var(--font);
+	top: 8rem;
+	left: 3rem;
+	z-index: 1;
+	background: none;
+	border: none;
+	font-size: 5rem;
+	cursor: pointer;
+}
+
+/* OPTIONS SECTION */
+
+.overlay-item {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+}
+
+.cheat {
+	font-size: 2rem;
+	font-family: var(--system);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.cheat-input {
+	width: 1.8rem;
+	height: 1.8rem;
+	cursor: pointer;
+}
+
+.option {
+	width: 12rem;
+	height: 5rem;
+	background: none;
+	border: 2px solid var(--font);
+	border-radius: 2rem;
+	color: var(--font);
+	cursor: pointer;
+	font-size: 1.6rem;
+	padding: 1rem 0.5rem;
+	transition: 0.1s;
+}
+
+.option:hover {
+	color: crimson;
+	border-color: crimson;
+}
+
+.stop {
+	border-color: crimson;
+	color: crimson;
+}
+
+/* Timer section */
+
+.seconds {
+	font-family: var(--system);
+	font-size: 3.5rem;
+	display: flex;
+	gap: 2rem;
+}
+
+/* WIN SECTION */
+
+.hidden {
+	display: none !important;
+}
+
+.win-message {
+	color: #fefefe;
+	pointer-events: none;
+	font-size: 5rem;
+	font-family: var(--system);
+}
+
+.winner {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	z-index: 1;
+	height: calc(100vh - 300px);
+	width: 100vw;
+	gap: 2rem;
+}
+
+.again {
+	background: none;
+	color: var(--font);
+	border: none;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+.again:hover {
+	color: crimson;
+}
+
