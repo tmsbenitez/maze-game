@@ -2,7 +2,9 @@
 
 Simple Maze Game with three levels of difficulty using the library [Matter.js](https://brm.io/matter-js/).
 
-![Maze Game Image]('./github/maze-game.png')
+![Maze Game Image](./github/maze-game.png)
+
+[Live Demo](https://tmsbenitez.github.io/maze-game/).
 
 ## Authors and acknowledgment.
 
